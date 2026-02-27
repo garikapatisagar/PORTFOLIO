@@ -31,7 +31,7 @@ const Hero = () => {
                         <div className="hero__image">
                             {/* Profile photo placeholder - Replace with your actual photo */}
                             <div className="hero__image-placeholder">
-                                <span><img src="../public/photo.jpg" alt="" /></span>
+                                <span><img src="/Images/photo.jpg" alt="" /></span>
                             </div>
                         </div>
                     </div>
