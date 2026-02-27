@@ -44,7 +44,7 @@ const Projects = () => {
             description: 'Developed a responsive personal portfolio using React.js, HTML, CSS, and Vite to showcase projects, skills, and technical experience. Designed structured sections with a modern UI to present backend and AI-based applications effectively.',
             image: <img src="../public/portfolio.png" alt="" />,
             technologies: ['React.js', 'CSS3', 'Vite', 'Responsive Design'],
-            // github: 'https://github.com/johndoe/portfolio',
+            github: 'https://github.com/garikapatisagar/PORTFOLIO',
             demo: null,
             featured: false
         },
