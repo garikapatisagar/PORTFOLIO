@@ -1,0 +1,202 @@
+/* ===========================================
+   Interests Section Styles
+   Modern card grid with hover effects
+   =========================================== */
+
+.interests {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+    position: relative;
+}
+
+.interests__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Interests Grid */
+.interests__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Interest Card */
+.interests__card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.interests__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top center,
+            rgba(99, 102, 241, 0.1) 0%,
+            transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interests__card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.interests__card:hover::before {
+    opacity: 1;
+}
+
+/* Icon Wrapper */
+.interests__icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.interests__card:hover .interests__icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.interests__icon {
+    font-size: 2.5rem;
+}
+
+/* Card Content */
+.interests__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.interests__description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tags */
+.interests__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.interests__tag {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+.interests__card:hover .interests__tag {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+}
+
+/* Quote Section */
+.interests__quote {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    position: relative;
+}
+
+.interests__quote blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #cbd5e1;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    position: relative;
+}
+
+.interests__quote-icon {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-family: Georgia, serif;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+.interests__quote cite {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ===========================================
+   Responsive Styles
+   =========================================== */
+
+@media (max-width: 768px) {
+    .interests__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interests__quote blockquote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .interests {
+        padding: 4rem 1rem;
+    }
+
+    .interests__card {
+        padding: 1.5rem;
+    }
+
+    .interests__icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .interests__icon {
+        font-size: 2rem;
+    }
+
+    .interests__quote {
+        padding: 2rem 1rem;
+    }
+}
